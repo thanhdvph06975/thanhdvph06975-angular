@@ -11,10 +11,12 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { SlideComponent } from './slide/slide.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductComponent, ProductListComponent, ProductManagerComponent, SlideComponent, ProductDetailComponent, ProductAddComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ProductsService]
 })
 export class AppModule { }
