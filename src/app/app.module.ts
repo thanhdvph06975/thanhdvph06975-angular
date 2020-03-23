@@ -12,10 +12,15 @@ import { SlideComponent } from './slide/slide.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductsService } from './services/products.service';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { ContactComponent } from './contact/contact.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductComponent, ProductListComponent, ProductManagerComponent, SlideComponent, ProductDetailComponent, ProductAddComponent ],
+  declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductComponent, ProductListComponent, ProductManagerComponent, SlideComponent, ProductDetailComponent, ProductAddComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, ErrorComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductsService]
 })
