@@ -10,6 +10,10 @@ export class ProductsService {
      return this.products;
   }
 
+  getProduct(id){
+    return this.products.find(product => product.id == id);
+  }
+
   addProduct(product) {
     let newObj = { id: 6, ...product };
     console.log(newObj);
