@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { data } from '../model/mockData';
+import {ProductsService} from '../services/products.service'
+import { product } from '../model/product';
 @Component({
   selector: 'app-product-manager',
   templateUrl: './product-manager.component.html',
@@ -7,13 +9,14 @@ import { data } from '../model/mockData';
 })
 export class ProductManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productsService:ProductsService) { }
 
   ngOnInit() {
+    this.products = this.productsService.products;
   }
-products=data;
+products:product[];
 
   removeItem(id) {
-    return this.products = this.products.filter(p => p.id != id);
+    this.productsService.removeItem(id);
   }
 }
