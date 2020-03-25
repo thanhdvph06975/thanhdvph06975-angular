@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { data } from '../model/mockData';
 import {ProductsService} from '../services/products.service'
 import { product } from '../model/product';
 @Component({
@@ -12,11 +11,11 @@ export class ProductManagerComponent implements OnInit {
   constructor(private productsService:ProductsService) { }
 
   ngOnInit() {
-    this.products = this.productsService.products;
+    this.products = this.productsService.getProducts();
   }
 products:product[];
 
   removeItem(id) {
-    this.productsService.removeItem(id);
+    this.products=this.productsService.removeItem(id);
   }
 }
