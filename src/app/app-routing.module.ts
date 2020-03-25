@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'service', component: ServiceComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'manager', component: ProductManagerComponent},
+  { path: 'list', component: ProductListComponent},
   { path: 'product/detail/:id', component: ProductDetailComponent},
   { path: 'add', component: ProductAddComponent},
   { path: '404', component: ErrorComponent},
