@@ -21,4 +21,8 @@ export class ProductsService {
     this.products.push(newObj);
     console.log(this.products);
   }
+
+  removeItem(id){
+    return this.products = this.products.filter(p => p.id != id);
+  }
 }
