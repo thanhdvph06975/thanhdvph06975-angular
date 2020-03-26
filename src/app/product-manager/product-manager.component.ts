@@ -11,11 +11,14 @@ export class ProductManagerComponent implements OnInit {
   constructor(private productsService:ProductsService) { }
 
   ngOnInit() {
-    this.products = this.productsService.getProducts();
+    this.getProducts();
   }
 products:product[];
 
   removeItem(id) {
     this.products=this.productsService.removeItem(id);
+  }
+    getProducts(){
+    this.productsService.getProducts().subscribe(data => {this.products=data});
   }
 }
