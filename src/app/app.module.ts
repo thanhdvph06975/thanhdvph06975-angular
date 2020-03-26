@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { CategoryComponent } from './category/category.component';
@@ -19,7 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ErrorComponent } from './error/error.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule,HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductComponent, ProductListComponent, ProductManagerComponent, SlideComponent, ProductDetailComponent, ProductAddComponent, HomeComponent, AboutComponent, ServiceComponent, ContactComponent, ErrorComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductsService]
