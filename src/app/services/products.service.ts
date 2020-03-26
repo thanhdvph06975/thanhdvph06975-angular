@@ -13,8 +13,9 @@ export class ProductsService {
       return this.http.get<product[]>(this.api);
   }
 
-  getProduct(id){
-    return this.products.find(product => product.id == id);
+  getProduct(id): Observable<product>{
+    // console.log(this.api+"/"+id);
+    return this.http.get<product>(this.api+"/"+id);
   }
 
   addProduct(product) {

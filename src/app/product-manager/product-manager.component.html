@@ -9,7 +9,7 @@
 		</tr>
 		<tr *ngFor="let product of products;index as i">
 			<th>{{i}}</th>
-			<th><a routerLink="/product/detail/{{product.id}}">{{product.name}}</a></th>
+			<th><a routerLink="/product/{{product.id}}">{{product.name}}</a></th>
 			<th>{{product.price}}</th>
 			<th><button class="btn btn-primary" routerLink="/product/detail/{{product.id}}">Show detail</button><br>
 				<button class="btn btn-danger" (click)="removeItem(product.id)">Remove</button></th>

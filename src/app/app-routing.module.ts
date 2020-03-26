@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'manager', component: ProductManagerComponent},
   { path: 'list', component: ProductListComponent},
-  { path: 'product/detail/:id', component: ProductDetailComponent},
+  { path: 'product/:id', component: ProductDetailComponent},
   { path: 'add', component: ProductAddComponent},
   { path: '404', component: ErrorComponent},
    { path: '**', redirectTo:'404', pathMatch:'full'},
