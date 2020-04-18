@@ -7,8 +7,9 @@
 			<th>Price</th>
 			<th>Action</th>
 		</tr>
-		<tr *ngFor="let product of products;index as i">
-			<th>{{i}}</th>
+		<!-- <tr *ngFor="let product of products;index as i"> -->
+		<tr *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+			<th>{{product.id}}</th>
 			<th><a routerLink="/product/{{product.id}}">{{product.name}}</a></th>
 			<th>{{product.price}}</th>
 			<th><button class="btn btn-primary" routerLink="/product/detail/{{product.id}}">Show detail</button><br>
@@ -16,6 +17,7 @@
 		</tr>
 	</thead>
 </table>
-<!-- <div *ngIf="selected">
-    {{selected.name}}
-</div> -->
+<ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="products.length"></ngb-pagination>
